@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './style.css';
 import Child1 from './Child1';
-
-export const UserContext = React.createContext({});
+import { UserContext } from './Contexts/UserContext';
+import TechDetails from './TechDetails';
 
 export default function App() {
   const [name, setName] = useState('');
@@ -17,6 +17,7 @@ export default function App() {
         <p>We are going to see some magic :)</p>
         <div>
           <Child1 />
+          <TechDetails />
         </div>
       </div>
     </UserContext.Provider>
